@@ -1,0 +1,304 @@
+.box {
+  /* display: grid;
+  grid-template-columns: 1fr; */
+  position: relative;
+  max-width: 604px;
+  height: 423px;
+  left: 517px;
+  top: -230px;
+  margin-bottom: -185px;
+  border: 2px solid #efefef;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.box > h3 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300px;
+  font-size: 25px;
+  line-height: 30px;
+
+  padding-top: 20px;
+  margin-left: 225px;
+  /* margin-right: 100px; */
+  color: white;
+}
+
+.crnt-page {
+  position: absolute;
+  left: 30.93%;
+  right: 65.36%;
+  top: 27.27%;
+  bottom: 67.05%;
+
+  background: #de3a93;
+  border-radius: 15px;
+}
+
+.filter {
+  position: absolute;
+  width: 150.88px;
+  height: 38px;
+  left: 1280px;
+  top: 128px;
+
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.filter-text {
+  position: absolute;
+  width: 48px;
+  height: 19px;
+  left: 1298px;
+  top: 135px;
+
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.arrow-down {
+  position: absolute;
+  width: 33.53px;
+  height: 33.53px;
+  left: 1387.29px;
+  top: 129.12px;
+
+  background: url(../img/ExpandArrow.png);
+  border-radius: 10px;
+}
+
+.profile-sub-options {
+  position: absolute;
+  width: 220px;
+  height: 117px;
+  left: 111px;
+  top: 291px;
+
+  background: rgba(11, 12, 14, 0.75);
+  border-radius: 10px;
+}
+
+.overview {
+  position: absolute;
+  width: 135px;
+  height: 32px;
+  left: 12px;
+  top: 19px;
+}
+
+.perks {
+  position: absolute;
+  width: 62px;
+  height: 22px;
+  left: 12px;
+  top: 51px;
+}
+
+.notification {
+  position: absolute;
+  width: 135px;
+  height: 22px;
+  left: 12px;
+  top: 84px;
+}
+
+.text-sub-options {
+  font-family: Montserrat;
+  font-style: normal;
+  /* font-weight: bold; */
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.notification.text-sub-options {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.title-notification {
+  position: absolute;
+  width: 213px;
+  height: 45px;
+  left: 210px;
+  margin-top: 43px;
+
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 41px;
+
+  color: #efefef;
+}
+
+.point {
+  position: absolute;
+  width: 36px;
+  height: 35px;
+  left: 561px;
+  top: 343px;
+
+  background: #8c5ca6;
+  box-shadow: 0px 5px 4px 4px #0b0c0e;
+  border-radius: 50%;
+}
+
+.second-point {
+  position: absolute;
+  width: 36px;
+  height: 35px;
+  left: 561px;
+  top: 448px;
+
+  background: #8c5ca6;
+  box-shadow: 0px 5px 4px 4px #0b0c0e;
+  border-radius: 50%;
+}
+
+.text-first {
+  position: absolute;
+  width: 300px;
+  height: 32px;
+  left: 635px;
+  top: 345px;
+
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 32px;
+
+  color: #efefef;
+}
+
+.text-second {
+  position: absolute;
+  width: 446px;
+  height: 64px;
+  left: 635px;
+  top: 440px;
+
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px;
+  line-height: 32px;
+
+  color: #efefef;
+}
+
+.side {
+  position: relative;
+  width: 159px;
+  height: 135px;
+  background: rgba(11, 12, 14, 0.47);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 280px;
+  margin-left: 75px;
+  z-index: 1;
+}
+#current {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: #efefef;
+  text-decoration: none;
+}
+
+.others {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 26px;
+  color: #efefef;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1445px) {
+  .filter {
+    left: 900px;
+  }
+  .filter-text {
+    left: 915px;
+  }
+  .arrow-down {
+    left: 990px;
+  }
+  .box {
+    width: 550px;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1040px) {
+  .filter {
+    left: 900px;
+  }
+  .filter-text {
+    left: 915px;
+  }
+  .arrow-down {
+    left: 990px;
+  }
+  .box {
+    width: 550px;
+    left: 210;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+  .side {
+    display: none;
+  }
+  .filter {
+    left: 300px;
+  }
+  .filter-text {
+    left: 315px;
+  }
+  .arrow-down {
+    left: 390px;
+  }
+  .box {
+    margin-bottom: 250px;
+    width: 400px;
+    left: 50px;
+    top: 190px;
+  }
+  .title-notification {
+    font-size: 25px;
+    left: 170px;
+  }
+  .point {
+    left: 100px;
+  }
+  .second-point {
+    left: 100px;
+  }
+  .text-first {
+    font-size: 15px;
+    left: 150px;
+  }
+  .text-second {
+    top: 450px;
+    font-size: 15px;
+    left: 150px;
+  }
+}

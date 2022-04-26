@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../review_styles.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Reviews</title>
+  </head>
+  <body>
+    <div class="logo">
+      <a href="https://vueloyal.netlify.app/public/common/overview.html"> </a>
+    </div>
+
+    <div class="navigation-bar">
+      <div class="crnt-page nav-text"></div>
+      <div class="profile nav-text">
+        <a href="https://vueloyal.netlify.app/public/common/overview.html"
+          >Profile</a
+        >
+      </div>
+      <div class="challenges nav-text">
+        <a href="https://vueloyal.netlify.app/public/common/experience.html"
+          >Challenges</a
+        >
+      </div>
+      <div class="schedule nav-text">
+        <a href="https://vueloyal.netlify.app/public/common/schedule.html"
+          >Schedule</a
+        >
+      </div>
+      <div class="shop nav-text">
+        <a href="https://vueloyal.netlify.app/public/common/shop.html">Shop</a>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="../common/overview.html">Profile</a><br /><br />
+      <a href="../common/notification.html" class="downMenues">Notification</a
+      ><br /><br />
+      <a href="#" class="downMenues">Perks</a><br /><br />
+      <a href="../common/friends.html" class="downMenues">Friends</a
+      ><br /><br />
+      <a href="../common/schedule.html">Schedule</a><br /><br />
+      <a href="../common/experience.html">Challenges</a><br /><br />
+      <a href="../common/shop.html">Shop</a>
+    </div>
+
+    <div class="burger-menu" onclick="openNav()">&#9776;</div>
+    <!-- main body  -->
+    <main>
+      <div class="ReviewsContainer">
+        <div class="CommentsRectangle">
+          <form
+            name="commentform"
+            id="commentform"
+            method="post"
+            action="/reviews/"
+          >
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title..."
+              required
+            />
+
+            <div class="star-rating">
+              <input type="radio" name="stars" id="star-a" value="5" />
+              <label for="star-a"></label>
+
+              <input type="radio" name="stars" id="star-b" value="4" />
+              <label for="star-b"></label>
+
+              <input type="radio" name="stars" id="star-c" value="3" />
+              <label for="star-c"></label>
+
+              <input type="radio" name="stars" id="star-d" value="2" />
+              <label for="star-d"></label>
+
+              <input type="radio" name="stars" id="star-e" value="1" />
+              <label for="star-e"></label>
+            </div>
+
+            <textarea
+              id="inputCommentArea"
+              name="inputCommentArea"
+              rows="10"
+              cols="30"
+              placeholder="Comment here..."
+              required
+            ></textarea>
+            <button id="button" type="submit">Publish</button>
+            <!-- </div> -->
+          </form>
+        </div>
+
+        <div class="scroll">
+          <!-- embed some js by getting info from the server, so that the reviews show up in the html -->
+          <%reviewsList.reverse()%> <%reviewsList.forEach(review => {%>
+          <div class="review">
+            <h3>"<%= review.title%>"</h3>
+            <h4><em><%= review.stars%></em><em> Stars</em></h4>
+            <p><%= review.inputCommentArea%></p>
+          </div>
+          <%})%>
+          <div class="review">
+            <h3>"TITANIC"</h3>
+            <h4><em>5 Stars</em></h4>
+            <!-- <h1>stars</h1> -->
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and
+            </p>
+          </div>
+
+          <div class="review">
+            <h3>"TITANIC"</h3>
+            <h4><em>5 Stars</em></h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and
+            </p>
+          </div>
+
+          <div class="review">
+            <h3>"TITANIC"</h3>
+            <h4><em>5 Stars</em></h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col"></div>
+          <div class="footer-col">
+            <ul>
+              <li>
+                <a
+                  href="https://www.myvue.com/about-vue/about-us"
+                  target="_blank"
+                  >About us</a
+                >
+              </li>
+              <li>
+                <a href="https://www.vuecinemas.nl/contact" target="_blank"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://vuexprojectblog.wordpress.com/home-2/"
+                  target="_blank"
+                  >By Desend</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <div class="social-links">
+              <a href="https://www.facebook.com/VueCinemas/" target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="https://twitter.com/vuecinemas" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="https://www.instagram.com/vuecinemasnl/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/c/VueCinema/featured"
+                target="_blank"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <ul>
+              <li><a href="../common/discalimer.html">Disclaimer</a></li>
+              <li><a href="../common/privacy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const myForm = document.getElementById("commentform");
+
+      myForm.addEventListener("submit", (e) => {
+        console.log("submitting!");
+        //e.preventDefault();
+      });
+    </script>
+  </body>
+</html>
